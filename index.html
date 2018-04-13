@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Práctrica ajax</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/fotos.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Buscador de fotos de Flickr</h1>
+    <form onsubmit="return BucarFotos()">
+        <div>
+            <label for="palabrasBusqueda">Palabras clave</label>
+            <input type="text" required="required" id="palabrasBusqueda" placeholder="Palabras de búsqueda">
+        </div>
+        <div>
+            <label for="OpcionBusqueda">Tipo de busqueda</label>
+            <select id="OpcionBusqueda">
+                <option value="todas">Todas las palabras claves</option>
+                <option value="alguna">Alguna palabra</option>
+            </select>
+        </div>
+        <button type="submit" id="Buscar">Buscar!</button>
+    </form>
+
+    <div>
+        <div id="imagenes"></div>
+    </div>
+</div>
+</body>
+</html>
