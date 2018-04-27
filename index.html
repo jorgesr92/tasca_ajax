@@ -9,24 +9,68 @@
 </head>
 <body>
 <div class="container">
-    <h1>Buscador de fotos de Flickr</h1>
-    <form onsubmit="return BucarFotos()">
-        <div>
-            <label for="palabrasBusqueda">Palabras clave</label>
-            <input type="text" required="required" id="palabrasBusqueda" placeholder="Palabras de búsqueda">
-        </div>
-        <div>
-            <label for="OpcionBusqueda">Tipo de busqueda</label>
-            <select id="OpcionBusqueda">
-                <option value="todas">Todas las palabras claves</option>
-                <option value="alguna">Alguna palabra</option>
-            </select>
-        </div>
-        <button type="submit" id="Buscar">Buscar!</button>
-    </form>
+    <h1 align="center">Buscador de fotos de Flickr</h1>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <form onsubmit="return buscarFotos()"> <!--formulario-->
+        
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="palabrasBusqueda">Palabras clave</label>
+                        <input type="text" required="required" class="form-control" id="palabrasBusqueda">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="OpcionBusqueda">Tipo de busqueda</label>
+                        <select id="OpcionBusqueda" class="form-control">
+                            <option id="todas" selected value="all">Todas las palabras claves</option>
+                            <option id="alguna" value="any">Alguna palabra</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div><button type="submit" class="btn btn-primary btn-lg" id="Buscar">Buscar!</button></div>
+                    </div>
+                </div>
 
+        
+            </form>
+        </div>
+    </div>
     <div>
-        <div id="imagenes"></div>
+            <br>
+            <div  class="card">  <!-- Tabla de resultados-->
+                <div class="card-body">
+                
+                    <div style="text-align:center">
+                    <table class="table table-striped" id="resultats">
+                        <tr> 
+                            <th> 
+                                <p>Foto</p>
+                            </th>
+                            <th> 
+                                <p>Título</p>
+                            </th>
+                            <th> 
+                                <p>Autor</p>
+                            </th>
+                            <th> 
+                                <p>Publicación</p>
+                            </th>
+                            <th> 
+                                <p>palabras clave</p>
+                            </th>
+                            <th> 
+                                <p>Link</p>
+                            </th>
+                        </tr>
+                        
+                               
+                            </table>    
+                    </div>
+                
+                </div>
+            </div>
+
     </div>
 </div>
 </body>
